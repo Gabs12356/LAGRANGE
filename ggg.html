@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		body{
+            background-image: url("gg.jpg");
+            background-repeat: no-repeat;
+            background-size:cover ;
+
+		}
+	 .calculos{
+	 	background: #000099;
+	 	color: #f0e8e6;
+	 	margin: 5px;
+	 	padding: 10px;
+	 	font-size: 20px;
+	 	text-align: center;
+	 }
+	 h1{
+	 	text-align: center;
+	 	color: #660033;
+	 	font-size: 35px;
+	 }
+     p{
+          text-align: center;
+          color: #00ffea;
+          font-size: 35px;
+     }
+     h3{
+          text-align: center;
+          color: #da1376;
+          font-size: 35px;
+     }
+     h2{
+          text-align: center;
+          color: #da1376;
+          font-size: 35px;
+     }
+	 .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	</style>
+</head>
+<body>
+	<article>
+	<h1>LAGRANGE</h1>
+	
+	
+		<img src="void.jpg"  class="center"width="2" height="300">
+
+        <p> </p>
+<script  type="text/javascript" >
+
+/*	var L=prompt("introducir el valor de L: 0.15 ");
+    var C=prompt("introducir el valor de C: 0.0000026");
+    var R=prompt("introducir el valor de R: 8");
+   
+    var LE=prompt("introducir el Error de L: 0.0005");
+    var CE=prompt("introducir el Error de C: 0.0000001");
+    var RE=prompt("introducir el Error de R: 0.0003");
+    */
+    var xk=21;
+    var x0=15;
+    var x1=18;
+    var x2=22;
+
+   /**/
+    var y0=420;
+    var y1=250;
+    var y2=308;
+
+    //var VL= V*(((R1*R3)*(R2*R4))/((R1+R2)*(R3+R4)));
+    var DR1=(((xk-x1)*(xk-x2))/((x0-x1)*(x0-x2)));
+    var DR2=(((xk-x0)*(xk-x2))/((x1-x0)*(x1-x2)));
+    var DR3=(((xk-x0)*(xk-x1))/((x2-x0)*(x2-x1)));
+    var real=290;
+   
+    var DV=y0*DR1+y1*DR2+y2*DR3; 
+
+    var e=(Math.abs(real-DV)/real);
+    var eP=e*100
+    document.write("<div class=calculos> Ecuacion para encontrar L20 :  "+DR1+" </div>")
+    document.write("<div class=calculos> Ecuacion para encontrar L21 :  "+DR2+" </div>")
+    document.write("<div class=calculos> Ecuacion para encontrar L22 :  "+DR3+" </div>")
+    document.write("<div class=calculos> Operacion con L y Y:"+DV+" </div>")
+	document.write("<div class=calculos> El error de este problema de casos de covid es:"+e+" </div>")
+	document.write("<div class=calculos> su error porcentual:"+eP+" </div>")
+    
+
+    </script>
+    
+    
+	
+
+</script>
+</article>	
+	
+</body>
+</html>
